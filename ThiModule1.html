@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="hinhchunhat">
+</canvas>
+<script>
+    // Bai1
+    // Cho danh sách các điểm thi ở trong một mảng
+    // Hãy viết hàm tìm được điểm thi cao thứ 3 với đầu vào là một
+    // mảng điểm. (không dùng hàm có sẵn để sắp xếp).
+    //
+    // Khai báo được hàm, bao gồm cả tham số
+    // Dùng vòng lặp để duyệt được mảng
+    // Tìm được giá trị điểm cao thứ 3
+    // Viết mã sạch
+
+// let array=[1,2,3,4,5,6,7,10,30,15];
+//
+//     function findMax1(arr){
+//         let max1=arr[0]
+//         for (let i = 0; i <arr.length; i++) {
+//             if(arr[i]>max1){
+//                 max1=arr[i]
+//             }
+//         }
+//             return max1;
+//     }
+//     let kqMax1=findMax1(array);
+//     // console.log(kqMax1);
+//
+//         function findMax2(arr){
+//             let max1=kqMax1
+//             let max2=0;
+//             for (let i = 0; i < arr.length; i++) {
+//                 if( arr[i]>max1){
+//                     max2=max1;
+//                     max1= arr[i];
+//                 }else if(arr[i]<max1 && arr[i]!==max1){
+//                     max2=arr[i]
+//                 }
+//             }
+//             return max2;
+//         }
+//     let kqMax2=findMax2(array);
+//     // console.log(kqMax2)
+//
+//
+//     //Xóa max 1 và max2 khỏi mảng ban ban đầu;
+//     function xoaMax1VaMax2(arr, index1,index2){
+//     let newArr=[];
+//     for (let i = 0; i < arr.length; i++) {
+//         if(arr[i]!==index1 && arr[i]!==index2){
+//            newArr[newArr.length]=arr[i];
+//         }
+//     }
+//     return newArr;
+// }
+// let newArr= xoaMax1VaMax2(array,kqMax2,kqMax1)
+//     // console.log(newArr);
+//
+//     function findMax3(arr){
+//         let max=arr[0];
+//         for (let i = 0; i < arr.length; i++) {
+//             if(arr[i]> max){
+//                 max=arr[i]
+//             }
+//         }
+//         return max
+//     }
+//     let max3InFirstArray=findMax3(newArr);
+//     console.log(max3InFirstArray);
+
+
+
+
+
+    // Bai2 Viết hàm tryRemoveFromArray() nhận vào tham số là một
+    // mảng và một số nguyên index, trả về mảng ban đầu đã được
+    // loại bỏ phần tử tại vị trí index nếu index hợp lệ. Nếu index
+    // không hợp lệ, trả về mảng ban đầu.
+    // (không dùng hàm có sẵn để xóa mảng)
+
+    // let Array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // let a = +prompt("Nhập");
+    //
+    // function xoaphantu(arr, index) {
+    //     let newArr = [];
+    //
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (i !== index) {
+    //             newArr[newArr.length] = arr[i];
+    //         } else if (index < 0) {
+    //             newArr = arr
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    //
+    // let newArr = xoaphantu(Array, a)
+    // console.log(newArr);
+
+
+
+
+    // Bai3: Viết hàm kiểm tra xem 1 chuỗi có nằm trong chuỗi còn lại
+    // không. Với đầu vào là 2 chuỗi (str1,str2) trong đó sẽ kiểm tra
+    // str1 có nằm trong str2 không, nếu có trả về true và ngược lại
+    // false. (không được dùng hàm có sẵn để tìm)
+
+
+    // let str1 = "123"
+    // let str2 = "123456789"
+    // function CheckString(str1, str2) {
+    //     for (let i = 0; i <= str2.length - str1.length; i++) {
+    //         let j;
+    //         for (j = 0; j < str1.length; j++) {
+    //             if (str2[i + j] !== str1[j]) {
+    //                 break;
+    //             }
+    //         }
+    //         if (j === str1.length) {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+    //
+    // console.log(CheckString(str1,str2))
+
+
+
+
+
+    // Bai4:Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô
+    // tả của lớp hình chữ nhật như sau:
+    //     Rectangle: Tên lớp
+    // - x: Toạ độ x
+    // - y: Toạ độ y
+    // - width: Chiều rộng
+    // - height: Chiều cao
+    // - color: Màu sắc (sử dụng mã màu hex)
+    // + render(canvas): Hiển thị hình chữ nhật trên một canvas
+    // Hãy thực hiện các thao tác theo kịch bản sau:
+    //     - Tạo một hình chữ nhật có tọa độ 10,10 và kích thước rộng 200,
+    //     cao 100, màu #000000
+    // - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng
+    // phương thức render
+    // Khai báo được lớp Rectangle
+    // Khai báo được phương thức render của lớp Rectangle
+    // Tạo được hình chữ nhật theo yêu cầu
+    // Sử dụng được phương thức render để hiển thị hình chữ nhật
+    // Viết mã sạch
+
+
+    // let canvas= document.getElementById('hinhchunhat')
+    // class Rectangle {
+    //     x;
+    //     y;
+    //     width;
+    //     height;
+    //     color;
+    //
+    //     constructor(xInput, yInput, widthInput, heightInput, colorInput) {
+    //         this.x = xInput;
+    //         this.y = yInput;
+    //         this.height = heightInput;
+    //         this.color = colorInput;
+    //         this.width = widthInput;
+    //     }
+    //     render(canvas){
+    //         let a=canvas.getContext("2d");
+    //         a.fillStyle=this.color;
+    //         a.fillRect(this.x,this.y,this.width,this.height);
+    //     }
+    // }
+    // let b= new Rectangle(10,10,200,100,'#000000')
+    // b.render(canvas);
+
+
+</script>
+
+
+</body>
+</html>
